@@ -39,13 +39,21 @@ $icon.addEventListener('click', function (e) {
     });
     $shallowClone.classList.remove('test')
 
-    const $inputcheckbox1 = $shallowClone.querySelectorAll('.left input');
+    const $inputcheckbox1 = $shallowClone.querySelectorAll('.left .inputs');
     for (let $ch of $inputcheckbox1) {
 
-        $ch.addEventListener('click', function (e) {
+        $ch.addEventListener('change', function (e) {
 
             if ($ch.checked) {
                 $ch.parentElement.children[1].style.textDecoration = 'line-through';
+                $ch.parentElement.parentElement.children[1].children[0].onclick = function () {
+                    if ($ch.checked) {
+                        alert('완료된 일정입니다.');
+                        $ch.parentElement.children[1].style.textDecoration = 'line-through';
+                        return;
+                    }
+                };
+
             }
             if (!$ch.checked) {
                 $ch.parentElement.children[1].style.textDecoration = 'none';
@@ -162,6 +170,15 @@ $input.addEventListener('keyup', function (e) {
 
                 if ($ch.checked) {
                     $ch.parentElement.children[1].style.textDecoration = 'line-through';
+                    $ch.parentElement.parentElement.children[1].children[0].onclick = function () {
+                        if ($ch.checked) {
+                            alert('완료된 일정입니다.');
+                            $ch.parentElement.children[1].style.textDecoration = 'line-through';
+                           
+                           
+                            return;
+                        }
+                    };
                 }
                 if (!$ch.checked) {
                     $ch.parentElement.children[1].style.textDecoration = 'none';
@@ -280,6 +297,13 @@ for (let $ch of $inputcheckbox) {
 
         if ($ch.checked) {
             $ch.parentElement.children[1].style.textDecoration = 'line-through';
+            $ch.parentElement.parentElement.children[1].children[0].onclick = function () {
+                if ($ch.checked) {
+                    alert('완료된 일정입니다.');
+                    $ch.parentElement.children[1].style.textDecoration = 'line-through';
+                    return;
+                }
+            };
         }
         if (!$ch.checked) {
             $ch.parentElement.children[1].style.textDecoration = 'none';
