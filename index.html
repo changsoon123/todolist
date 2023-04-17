@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- reset.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- custom.css -->
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+    <script src="./support.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="scheduler">
+            <section class="main">
+                <h1>일정 관리</h1>
+                <div class="type">
+                    <input type="text" placeholder="할 일을 입력하세요.">
+                    <div class="icon"><span class="lnr lnr-plus-circle"></span></div>
+                </div>
+            </section>
+            <ul id="todoList">
+                <div class="papa hidden">
+                    <li>
+                        <div class="left">
+                            <input type="checkbox" class="inputs">
+                            <div class="text">할 일0</div>
+                        </div>
+                        <div class="right">
+                            <span class="lnr lnr-undo"></span>
+                            <span class="lnr lnr-cross-circle"></span>
+                        </div>
+                    </li>
+                </div>
+                <div class="papa">
+                    <li>
+                        <div class="left">
+                            <input type="checkbox" class="inputs">
+                            <div class="text">할 일1</div>
+                        </div>
+                        <div class="right">
+                            <span class="lnr lnr-undo"></span>
+                            <span class="lnr lnr-cross-circle"></span>
+                        </div>
+                    </li>
+                </div>
+                <div class="papa">
+                    <li>
+                        <div class="left">
+                            <input type="checkbox" class="inputs">
+                            <div class="text">할 일2</div>
+                        </div>
+                        <div class="right">
+                            <span class="lnr lnr-undo"></span>
+                            <span class="lnr lnr-cross-circle"></span>
+                        </div>
+                    </li>
+                </div>
+                <div class="papa">
+                    <li>
+                        <div class="left">
+                            <input type="checkbox" class="inputs">
+                            <div class="text">할 일3</div>
+                        </div>
+                        <div class="right">
+                            <span class="lnr lnr-undo"></span>
+                            <span class="lnr lnr-cross-circle"></span>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
